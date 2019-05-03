@@ -28,7 +28,7 @@ jobs:
       - run: go get -v -t -d ./...
       - run: go test -v ./...
       - run: go build -o output ./*.go
-      - run: ./main
+      - run: ./output/main
       - run: mkdir -p /tmp/store && mv output/* /tmp/store
       - store_artifacts:
           path: /tmp/store/*
