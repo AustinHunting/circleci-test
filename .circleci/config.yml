@@ -27,8 +27,8 @@ jobs:
       # specify any bash command here prefixed with `run: `
       - run: go get -v -t -d ./...
       - run: go test -v ./...
-      - run: go build -o output/main ./*.go
-      - run: ./output/main
-      - run: mkdir -p /tmp/store && mv output/* /tmp/store
+      - run: go build main.go
+      - run: ./main
+      - run: mkdir -p /tmp/store && mv ./main /tmp/store
       - store_artifacts:
           path: /tmp/store/*
