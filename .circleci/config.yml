@@ -31,4 +31,4 @@ jobs:
       - run: ./main
       - run: mkdir -p /store && mv ./main /store
       - store_artifacts:
-        path: /store/main
+          path: /store/main
